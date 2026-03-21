@@ -61,10 +61,31 @@ export const PORTFOLIO_DATA = {
       github: "https://github.com/DevloperHS/agentic_cli_tool"
     }
   ],
+  blogPlatforms: [
+    {
+      key: "devto",
+      label: "Dev.to",
+      profileUrl: "https://dev.to/developer_harsh",
+      description: "Technical deep-dives on AI, agents, and open-source tooling."
+    },
+    {
+      key: "medium",
+      label: "Medium",
+      profileUrl: "https://medium.com/@devloper_hs",
+      description: "Long-form essays on AI engineering, career, and the builder's mindset."
+    },
+    {
+      key: "analyticsvidhya",
+      label: "Analytics Vidhya",
+      profileUrl: "https://www.analyticsvidhya.com/blog/author/harsh1092/",
+      description: "Data science and machine learning tutorials for practitioners."
+    }
+  ],
   posts: [
     {
       id: 1,
       slug: "mcp-servers-clients",
+      platform: "devto",
       title: "How to build MCP Servers and Clients from Scratch",
       date: "Mar 16, 2025",
       readingTime: "8 min",
@@ -74,6 +95,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 2,
       slug: "qwen3-vs-deepseek",
+      platform: "devto",
       title: "Qwen 3 vs. Deepseek R1: Complete Comparison",
       date: "May 4, 2025",
       readingTime: "14 min",
@@ -83,6 +105,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 3,
       slug: "a2a-protocol-guide",
+      platform: "devto",
       title: "A Practical Guide to Agent-to-Agent (A2A) Protocol",
       date: "Apr 29, 2025",
       readingTime: "10 min",
@@ -92,6 +115,7 @@ export const PORTFOLIO_DATA = {
     {
       id: 4,
       slug: "claude-vs-codex",
+      platform: "devto",
       title: "Claude Code vs. OpenAI Codex: Which is Best for Pair Programming?",
       date: "May 30, 2025",
       readingTime: "11 min",
