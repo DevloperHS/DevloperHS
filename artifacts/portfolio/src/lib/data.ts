@@ -40,7 +40,7 @@ export const PORTFOLIO_DATA = {
       tech: ["Python", "LangGraph", "Local LLMs", "Multi-agent pipelines"],
       stars: 34,
       forks: 5,
-      github: "https://github.com/22f2000147/deep-researcher"
+      github: "https://github.com/22f2000147/qwen_deep_researcher"
     },
     {
       id: "vae-rl-game-generator",
