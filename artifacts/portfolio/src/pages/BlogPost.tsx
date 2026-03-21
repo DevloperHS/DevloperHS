@@ -4,6 +4,8 @@ import { PORTFOLIO_DATA } from "@/lib/data";
 import { BLOG_CONTENT } from "@/lib/blogContent";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { ArrowLeft } from "lucide-react";
 
 export default function BlogPost() {
@@ -79,19 +81,43 @@ export default function BlogPost() {
             blockquote: ({ children }) => (
               <blockquote className="border-l-2 border-primary/50 pl-4 my-4 text-muted-foreground italic">{children}</blockquote>
             ),
-            code: ({ inline, children, ...props }: { inline?: boolean; children?: React.ReactNode; className?: string }) =>
-              inline ? (
-                <code className="px-1.5 py-0.5 bg-muted/50 font-mono text-sm text-primary rounded-none border border-border/50" {...props}>
-                  {children}
-                </code>
-              ) : (
-                <code className="block bg-muted/30 border border-border p-4 font-mono text-sm text-foreground overflow-x-auto my-4 whitespace-pre" {...props}>
-                  {children}
-                </code>
-              ),
-            pre: ({ children }) => (
-              <pre className="my-4 overflow-x-auto">{children}</pre>
-            ),
+            code: ({ inline, children, className }: { inline?: boolean; children?: React.ReactNode; className?: string }) => {
+              const match = className?.match(/language-(\w+)/);
+              const language = match ? match[1] : "text";
+              const code = String(children).replace(/\n$/, "");
+
+              if (inline) {
+                return (
+                  <code className="px-2 py-1 bg-primary/15 text-primary font-mono text-sm border border-primary/30 rounded-sm">
+                    {children}
+                  </code>
+                );
+              }
+
+              return (
+                <div className="my-6 rounded-lg overflow-hidden border border-border/30 shadow-lg">
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 border-b border-border/30 flex items-center justify-between">
+                    <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">{language}</span>
+                  </div>
+                  <SyntaxHighlighter
+                    language={language}
+                    style={oneDark}
+                    customStyle={{
+                      margin: 0,
+                      padding: "1rem",
+                      background: "#1e1e1e",
+                      fontSize: "14px",
+                      lineHeight: "1.6",
+                    }}
+                    showLineNumbers={code.split("\n").length > 5}
+                    wrapLines={true}
+                  >
+                    {code}
+                  </SyntaxHighlighter>
+                </div>
+              );
+            },
+            pre: ({ children }) => <div>{children}</div>,
             table: ({ children }) => (
               <div className="overflow-x-auto my-6">
                 <table className="w-full border-collapse text-sm font-mono">{children}</table>
@@ -108,10 +134,13 @@ export default function BlogPost() {
             ),
             hr: () => <hr className="border-border my-8" />,
             strong: ({ children }) => (
-              <strong className="text-foreground font-semibold">{children}</strong>
+              <strong className="text-foreground font-semibold bg-primary/10 px-1 rounded-sm">{children}</strong>
+            ),
+            em: ({ children }) => (
+              <em className="text-primary/90 italic">{children}</em>
             ),
             a: ({ href, children }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors">
+              <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80 hover:bg-primary/5 transition-colors px-1 rounded-sm">
                 {children}
               </a>
             ),
