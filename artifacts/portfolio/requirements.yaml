@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For smooth page transitions and micro-interactions matching the premium zine aesthetic"
+  "clsx": "Utility for conditionally joining classNames together"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  "lucide-react": "For UI icons"
+
+images: []
+
+notes:
+  - This is a fully static portfolio site.
+  - Data is managed locally in src/lib/data.ts as there is no backend API required.
+  - Using framer-motion for fluid, moody entry animations to match the 'zine/editorial' vibe.

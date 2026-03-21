@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'IBM Plex Mono', monospace; /* Using mono for sans to give it a raw, dev, zine feel */
+  --font-serif: 'Zilla Slab', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Moody, Dark, Editorial Palette */
+  --color-background: hsl(0, 0%, 4%);
+  --color-foreground: hsl(0, 0%, 90%);
+  
+  --color-border: hsl(0, 0%, 15%);
+  --color-input: hsl(0, 0%, 12%);
+  --color-ring: hsl(0, 0%, 40%);
+
+  --color-card: hsl(0, 0%, 6%);
+  --color-card-foreground: hsl(0, 0%, 90%);
+  --color-card-border: hsl(0, 0%, 15%);
+
+  --color-popover: hsl(0, 0%, 6%);
+  --color-popover-foreground: hsl(0, 0%, 90%);
+  --color-popover-border: hsl(0, 0%, 15%);
+
+  /* Primary is a muted parchment/bone color for contrast */
+  --color-primary: hsl(40, 20%, 85%);
+  --color-primary-foreground: hsl(0, 0%, 4%);
+  --color-primary-border: hsl(40, 20%, 85%);
+
+  --color-secondary: hsl(0, 0%, 12%);
+  --color-secondary-foreground: hsl(0, 0%, 90%);
+  --color-secondary-border: hsl(0, 0%, 20%);
+
+  --color-muted: hsl(0, 0%, 10%);
+  --color-muted-foreground: hsl(0, 0%, 55%);
+  --color-muted-border: hsl(0, 0%, 18%);
+
+  --color-accent: hsl(0, 0%, 15%);
+  --color-accent-foreground: hsl(0, 0%, 95%);
+  --color-accent-border: hsl(0, 0%, 25%);
+
+  --color-destructive: hsl(0, 60%, 50%);
+  --color-destructive-foreground: hsl(0, 0%, 98%);
+  --color-destructive-border: hsl(0, 60%, 40%);
+
+  --radius-sm: 0px; /* Brutalist/zine vibe usually avoids heavy rounding */
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 8px;
+}
+
+:root {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 90%;
+  
+  --border: 0 0% 15%;
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 90%;
+  
+  --primary: 40 20% 85%;
+  --primary-foreground: 0 0% 4%;
+  
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 55%;
+  
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 95%;
+
+  --radius: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    /* Custom scrollbar for webkit */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      @apply bg-background;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-muted-foreground/30;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-muted-foreground/50;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Brutalist hover effect */
+  .hover-brutalist {
+    @apply transition-all duration-200 ease-out;
+  }
+  .hover-brutalist:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px 0px hsl(var(--border));
+  }
+  
+  .hover-brutalist-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px 0px hsl(var(--primary));
+  }
+}
