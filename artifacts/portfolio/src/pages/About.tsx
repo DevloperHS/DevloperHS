@@ -8,17 +8,26 @@ export default function About() {
         <h1 className="text-4xl md:text-5xl font-serif border-b border-border pb-4">
           Manifesto & Bio
         </h1>
-        <div className="space-y-4 max-w-3xl text-lg">
-          <p className="font-sans text-muted-foreground leading-relaxed">
-            I am {PORTFOLIO_DATA.name}, an AI Engineer and Technical Writer driven by curiosity and a desire to build things that matter. Currently operating out of {PORTFOLIO_DATA.location}, I spend my days working at Composio, exploring the frontiers of agentic AI. <span className="font-mono">›</span>
-          </p>
-          <p className="font-sans text-muted-foreground leading-relaxed">
-            My background is rooted in rigorous academics at IIT Madras, where I am pursuing a B.S. in Data Science & Applications. But my real education happens in the terminal, reading documentation, and writing code late into the night. I believe in open source, local execution, and the power of well-architected systems. <span className="font-mono">›</span>
-          </p>
-          <p className="font-sans text-muted-foreground leading-relaxed">
-            Beyond coding, I run the YouTube channel "{PORTFOLIO_DATA.socials.find(s => s.name === 'YouTube')?.handle}", sharing knowledge and breaking down complex technical concepts for over 6,000 developers. Community is everything.
-          </p>
-        </div>
+        <ul className="space-y-4 max-w-3xl text-lg list-none">
+          <li className="flex gap-3">
+            <span className="text-primary font-mono mt-1">▹</span>
+            <span className="font-sans text-muted-foreground leading-relaxed">
+              I am {PORTFOLIO_DATA.name}, an AI Engineer and Technical Writer driven by curiosity and a desire to build things that matter. Currently operating out of {PORTFOLIO_DATA.location}, I spend my days working at Composio, exploring the frontiers of agentic AI.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-primary font-mono mt-1">▹</span>
+            <span className="font-sans text-muted-foreground leading-relaxed">
+              My background is rooted in rigorous academics at IIT Madras, where I am pursuing a B.S. in Data Science & Applications. But my real education happens in the terminal, reading documentation, and writing code late into the night. I believe in open source, local execution, and the power of well-architected systems.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-primary font-mono mt-1">▹</span>
+            <span className="font-sans text-muted-foreground leading-relaxed">
+              Beyond coding, I run the YouTube channel "{PORTFOLIO_DATA.socials.find(s => s.name === 'YouTube')?.handle}", sharing knowledge and breaking down complex technical concepts for over 6,000 developers. Community is everything.
+            </span>
+          </li>
+        </ul>
       </section>
 
       <section className="grid md:grid-cols-2 gap-12 pt-8 border-t border-border/50">
