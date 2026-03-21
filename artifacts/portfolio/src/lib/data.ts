@@ -1,5 +1,5 @@
 export const PORTFOLIO_DATA = {
-  name: "Purnendu Shukla",
+  name: "Devloper Harsh",
   handle: "devloper_hs",
   tagline: "AI Engineer · Technical Writer · IIT Madras",
   role: "AI Engineer + Technical Writer @ Composio",

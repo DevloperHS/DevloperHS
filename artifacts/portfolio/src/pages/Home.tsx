@@ -21,11 +21,10 @@ export default function Home() {
             {PORTFOLIO_DATA.tagline}
           </h2>
           
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl font-sans">
-            Currently working as an {PORTFOLIO_DATA.role} in {PORTFOLIO_DATA.location}. 
-            Obsessed with multi-agent systems, local LLMs, and building robust, 
-            intelligent applications from the ground up.
-          </p>
+          <div className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl font-sans space-y-2">
+            <p>&gt; Currently working as an {PORTFOLIO_DATA.role} in {PORTFOLIO_DATA.location}.</p>
+            <p>&gt; Obsessed with multi-agent systems, local LLMs, and building robust, intelligent applications from the ground up.</p>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-4 pt-8">
