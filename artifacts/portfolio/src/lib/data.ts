@@ -64,21 +64,39 @@ export const PORTFOLIO_DATA = {
   posts: [
     {
       id: 1,
-      title: "Benchmarking Local LLMs: The Unsloth Advantage",
-      date: "Mar 15, 2025",
-      excerpt: "Exploring the performance gains of fine-tuning local models with Unsloth compared to traditional methods. Why local AI is becoming increasingly viable for complex reasoning tasks."
+      slug: "mcp-servers-clients",
+      title: "How to build MCP Servers and Clients from Scratch",
+      date: "Mar 16, 2025",
+      readingTime: "8 min",
+      tags: ["ai", "beginners", "productivity", "chatgpt"],
+      excerpt: "Think of MCP as a USB-C port for AI. Model Context Protocol provides a standard, secure, real-time interface for AI systems to connect with external tools, APIs, and data sources. Learn how to build your own MCP server from scratch using Python SDK and connect it to Cursor."
     },
     {
       id: 2,
-      title: "Building Multi-Agent Pipelines with LangGraph",
-      date: "Feb 28, 2025",
-      excerpt: "A deep dive into stateful, multi-actor LLM applications. How I structured the Deep Researcher Agent to decouple web scraping, synthesis, and writing into specialized nodes."
+      slug: "qwen3-vs-deepseek",
+      title: "Qwen 3 vs. Deepseek R1: Complete Comparison",
+      date: "May 4, 2025",
+      readingTime: "14 min",
+      tags: ["ai", "opensource", "deeplearning", "productivity"],
+      excerpt: "Alibaba's Qwen 3 Series claims to outperform DeepSeek R1, Grok-3, and Gemini 2.5 Pro with fewer active parameters. I put both models through rigorous testing across coding, reasoning, math, and writing tasks to find out which one truly reigns supreme."
     },
     {
       id: 3,
-      title: "From Notebooks to Production: Deploying AI",
-      date: "Jan 12, 2025",
-      excerpt: "Bridging the gap between data science and software engineering. Practical patterns for wrapping PyTorch models in FastAPI and containerizing with Docker."
+      slug: "a2a-protocol-guide",
+      title: "A Practical Guide to Agent-to-Agent (A2A) Protocol",
+      date: "Apr 29, 2025",
+      readingTime: "10 min",
+      tags: ["ai", "opensource", "python", "agents"],
+      excerpt: "Google's A2A Protocol enables different specialized AI agents to communicate directly, delegate tasks, and work as a team. Over 50 tech partners have already adopted it. Here's a deep dive into the theory and a practical build using Composio, Gemini, and Puppeteer MCP."
+    },
+    {
+      id: 4,
+      slug: "claude-vs-codex",
+      title: "Claude Code vs. OpenAI Codex: Which is Best for Pair Programming?",
+      date: "May 30, 2025",
+      readingTime: "11 min",
+      tags: ["ai", "opensource", "webdev", "programming"],
+      excerpt: "AI-powered CLI agents are revolutionising how developers interact with their codebases. I tested both Claude Code and OpenAI Codex CLI head-to-head across architecture, memory management, security, and real-world coding tasks to find the winner."
     }
   ]
 };
