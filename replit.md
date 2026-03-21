@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── portfolio/          # Purnendu Shukla personal portfolio (React + Vite, static)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -90,6 +91,19 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 ### `lib/api-client-react` (`@workspace/api-client-react`)
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
+
+### `artifacts/portfolio` (`@workspace/portfolio`)
+
+Static personal portfolio site for Purnendu Shukla (devloper_hs). Deployed at root path `/`.
+
+- Pages: Home, About, Work (+ per-project sub-pages), Blog, Contact
+- Router: Wouter (template default; functionally equivalent to React Router)
+- Styling: Tailwind v4, dark moody palette, serif+mono typography, Framer Motion transitions
+- Data: All content in `src/lib/data.ts` (projects, blog posts, social links, skills)
+- No backend — fully static, no API calls needed
+- `pnpm --filter @workspace/portfolio run dev` — dev server
+- `pnpm --filter @workspace/portfolio run build` — static build to `dist/public/`
+- `PORT` and `BASE_PATH` env vars have sane defaults; build works without them
 
 ### `scripts` (`@workspace/scripts`)
 
