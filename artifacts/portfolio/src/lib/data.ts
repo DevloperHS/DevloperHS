@@ -49,7 +49,7 @@ export const PORTFOLIO_DATA = {
       shortDesc: "Dynamic game frame generation using Variational Autoencoders and RL.",
       fullDesc: "A novel approach to interactive game environments. This project explores dynamic game frame generation using Variational Autoencoders (VAE) and Reinforcement Learning (RL), enabling user interaction to actively shape and generate the game environment in real-time. A complex AI application pushing the boundaries of simulation.",
       tech: ["PyTorch", "VAE", "Reinforcement Learning", "Python"],
-      github: "https://github.com/22f2000147"
+      github: "https://github.com/22f2000147/Game-Environment-Generator/blob/main/world_model.ipynb"
     },
     {
       id: "agentic-cli-tool",
@@ -58,7 +58,7 @@ export const PORTFOLIO_DATA = {
       shortDesc: "Versatile CLI agent built with Composio SDK for natural language commands.",
       fullDesc: "A versatile command-line interface agent built leveraging the Composio SDK. This tool acts as a powerful local assistant, performing a wide variety of tasks directly from the terminal through natural language user commands. It showcases practical agentic AI capabilities in daily developer workflows.",
       tech: ["Composio SDK", "Python", "CLI", "LLMs"],
-      github: "https://github.com/22f2000147"
+      github: "https://github.com/DevloperHS/agentic_cli_tool"
     }
   ],
   posts: [
