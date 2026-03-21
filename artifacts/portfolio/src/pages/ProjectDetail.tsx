@@ -14,7 +14,7 @@ export default function ProjectDetail() {
       <PageTransition className="flex flex-col items-center justify-center min-h-[50vh] text-center space-y-4">
         <h1 className="text-4xl font-serif">Project Not Found</h1>
         <p className="text-muted-foreground">The project you are looking for does not exist in this dimension.</p>
-        <Link href="/work" className="font-mono text-primary hover:underline underline-offset-4 mt-4 inline-flex items-center gap-2">
+        <Link href="/work" className="font-mono text-primary hover:underline underline-offset-4 mt-4 inline-flex items-center gap-2 min-h-[44px]">
           <ArrowLeft size={16} /> Return to Gallery
         </Link>
       </PageTransition>

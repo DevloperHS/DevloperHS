@@ -18,7 +18,7 @@ export default function BlogPost() {
   if (!post || !content) {
     return (
       <PageTransition className="max-w-3xl space-y-8">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors min-h-[44px]">
           <ArrowLeft size={14} /> Back to Transmissions
         </Link>
         <h1 className="text-4xl font-serif">Post not found</h1>

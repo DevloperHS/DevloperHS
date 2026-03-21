@@ -75,7 +75,7 @@ export function Navbar() {
       </header>
 
       {isOpen && (
-        <div className="fixed inset-0 z-30 flex flex-col bg-background/97 backdrop-blur-lg md:hidden pt-16">
+        <div className="fixed inset-0 z-50 flex flex-col bg-background/97 backdrop-blur-lg md:hidden pt-16">
           <nav className="flex flex-col items-start px-8 pt-12 gap-1">
             {links.map((link, i) => (
               <Link
