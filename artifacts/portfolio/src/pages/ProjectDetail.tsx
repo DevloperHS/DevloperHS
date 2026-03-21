@@ -23,7 +23,7 @@ export default function ProjectDetail() {
 
   return (
     <PageTransition className="max-w-3xl mx-auto space-y-12">
-      <Link href="/work" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors group">
+      <Link href="/work" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors group min-h-[44px]">
         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> 
         BACK TO WORKS
       </Link>
@@ -37,7 +37,7 @@ export default function ProjectDetail() {
             href={project.github} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 font-mono text-sm hover-brutalist"
+            className="inline-flex items-center gap-2 bg-foreground text-background px-4 py-3 font-mono text-sm hover-brutalist min-h-[44px]"
           >
             <Github size={16} />
             VIEW SOURCE

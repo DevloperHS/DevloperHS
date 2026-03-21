@@ -29,7 +29,7 @@ export default function BlogPost() {
   return (
     <PageTransition className="max-w-3xl space-y-10">
       <div className="space-y-6">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors min-h-[44px]">
           <ArrowLeft size={14} /> Back to Transmissions
         </Link>
 
@@ -159,7 +159,7 @@ export default function BlogPost() {
       </article>
 
       <div className="pt-8 border-t border-border">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors">
+        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary transition-colors min-h-[44px]">
           <ArrowLeft size={14} /> Back to Transmissions
         </Link>
       </div>

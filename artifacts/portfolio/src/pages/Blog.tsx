@@ -55,6 +55,7 @@ export default function Blog() {
               </button>
             ))}
           </div>
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-background to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-background to-transparent" />
         </div>
 
@@ -66,7 +67,7 @@ export default function Blog() {
             href={activePlatform.profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-primary transition-colors group flex-shrink-0 ml-4"
+            className="inline-flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-primary transition-colors group flex-shrink-0 ml-4 min-h-[44px]"
           >
             View profile
             <ArrowUpRight
