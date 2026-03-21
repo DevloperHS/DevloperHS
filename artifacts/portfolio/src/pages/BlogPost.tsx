@@ -81,14 +81,16 @@ export default function BlogPost() {
             blockquote: ({ children }) => (
               <blockquote className="border-l-2 border-primary/50 pl-4 my-4 text-muted-foreground italic">{children}</blockquote>
             ),
-            code: ({ inline, children, className }: { inline?: boolean; children?: React.ReactNode; className?: string }) => {
+            code: ({ children, className }: { children?: React.ReactNode; className?: string }) => {
               const match = className?.match(/language-(\w+)/);
               const language = match ? match[1] : "text";
               const code = String(children).replace(/\n$/, "");
 
-              if (inline) {
+              const isInline = !className?.startsWith("language-") && !code.includes("\n");
+
+              if (isInline) {
                 return (
-                  <code className="px-2 py-1 bg-primary/15 text-primary font-mono text-sm border border-primary/30 rounded-sm">
+                  <code className="px-1.5 py-0.5 bg-[#2d2d2d] text-[#e6db74] font-mono text-[0.85em] rounded">
                     {children}
                   </code>
                 );
