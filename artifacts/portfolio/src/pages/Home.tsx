@@ -28,17 +28,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 pt-8">
+        <div className="flex flex-col sm:flex-row gap-4 pt-8">
           <Link 
             href="/work" 
-            className="group inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 font-mono font-medium text-sm hover-brutalist"
+            className="group inline-flex items-center justify-center gap-2 bg-foreground text-background px-6 py-3 font-mono font-medium text-sm hover-brutalist min-h-[44px]"
           >
             VIEW MY WORK
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link 
             href="/about" 
-            className="inline-flex items-center gap-2 border border-border bg-transparent text-foreground px-6 py-3 font-mono font-medium text-sm hover-brutalist-primary hover:text-primary transition-colors"
+            className="inline-flex items-center justify-center gap-2 border border-border bg-transparent text-foreground px-6 py-3 font-mono font-medium text-sm hover-brutalist-primary hover:text-primary transition-colors min-h-[44px]"
           >
             READ MANIFESTO
           </Link>

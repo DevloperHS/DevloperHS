@@ -29,8 +29,8 @@ export default function ProjectDetail() {
       </Link>
 
       <header className="space-y-6 pb-8 border-b border-border">
-        <h1 className="text-4xl md:text-6xl font-serif leading-tight">{project.title}</h1>
-        <p className="text-xl text-primary font-mono">{project.shortDesc}</p>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif leading-tight">{project.title}</h1>
+        <p className="text-lg sm:text-xl text-primary font-mono">{project.shortDesc}</p>
         
         <div className="flex flex-wrap gap-4 pt-4">
           <a 

@@ -101,21 +101,24 @@ export default function BlogPost() {
                   <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 border-b border-border/30 flex items-center justify-between">
                     <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">{language}</span>
                   </div>
-                  <SyntaxHighlighter
-                    language={language}
-                    style={oneDark}
-                    customStyle={{
-                      margin: 0,
-                      padding: "1rem",
-                      background: "#1e1e1e",
-                      fontSize: "14px",
-                      lineHeight: "1.6",
-                    }}
-                    showLineNumbers={code.split("\n").length > 5}
-                    wrapLines={true}
-                  >
-                    {code}
-                  </SyntaxHighlighter>
+                  <div className="overflow-x-auto">
+                    <SyntaxHighlighter
+                      language={language}
+                      style={oneDark}
+                      customStyle={{
+                        margin: 0,
+                        padding: "1rem",
+                        background: "#1e1e1e",
+                        fontSize: "13px",
+                        lineHeight: "1.6",
+                        minWidth: "100%",
+                      }}
+                      showLineNumbers={code.split("\n").length > 5}
+                      wrapLines={false}
+                    >
+                      {code}
+                    </SyntaxHighlighter>
+                  </div>
                 </div>
               );
             },
@@ -147,7 +150,7 @@ export default function BlogPost() {
               </a>
             ),
             img: ({ src, alt }) => (
-              <img src={src} alt={alt} className="my-6 max-w-full border border-border/30" />
+              <img src={src} alt={alt} className="my-6 w-full h-auto border border-border/30" />
             ),
           }}
         >

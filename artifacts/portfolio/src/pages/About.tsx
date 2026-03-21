@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-4xl md:text-5xl font-serif border-b border-border pb-4">
           Manifesto & Bio
         </h1>
-        <ul className="space-y-4 max-w-3xl text-lg list-none">
+        <ul className="space-y-4 max-w-3xl text-base sm:text-lg list-none">
           <li className="flex gap-3">
             <span className="text-primary font-mono mt-1">▹</span>
             <span className="font-sans text-muted-foreground leading-relaxed">

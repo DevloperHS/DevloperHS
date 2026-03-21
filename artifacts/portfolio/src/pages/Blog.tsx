@@ -30,29 +30,32 @@ export default function Blog() {
       </header>
 
       <div className="space-y-8">
-        <div className="flex items-center gap-0 border-b border-border">
-          {blogPlatforms.map((platform) => (
-            <button
-              key={platform.key}
-              onClick={() => setActiveTab(platform.key)}
-              className={`flex items-center gap-2 px-5 py-3 font-mono text-sm transition-colors border-b-2 -mb-[2px] ${
-                activeTab === platform.key
-                  ? "border-primary text-foreground"
-                  : "border-transparent text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              <span
-                className={`text-xs px-1.5 py-0.5 tracking-widest transition-colors ${
+        <div className="relative border-b border-border">
+          <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
+            {blogPlatforms.map((platform) => (
+              <button
+                key={platform.key}
+                onClick={() => setActiveTab(platform.key)}
+                className={`flex-shrink-0 flex items-center gap-2 px-4 sm:px-5 py-3 min-h-[44px] font-mono text-sm transition-colors border-b-2 -mb-[2px] whitespace-nowrap ${
                   activeTab === platform.key
-                    ? "bg-primary text-background"
-                    : "bg-border text-muted-foreground"
+                    ? "border-primary text-foreground"
+                    : "border-transparent text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {PLATFORM_ICONS[platform.key]}
-              </span>
-              {platform.label}
-            </button>
-          ))}
+                <span
+                  className={`text-xs px-1.5 py-0.5 tracking-widest transition-colors ${
+                    activeTab === platform.key
+                      ? "bg-primary text-background"
+                      : "bg-border text-muted-foreground"
+                  }`}
+                >
+                  {PLATFORM_ICONS[platform.key]}
+                </span>
+                {platform.label}
+              </button>
+            ))}
+          </div>
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-background to-transparent" />
         </div>
 
         <div className="flex items-center justify-between">
