@@ -4,7 +4,7 @@
 
 **AI engineer. I build agents, test how well they really work, and ship demos people can use.**
 
-AI Engineer & Technical Writer (Composio) · IIT Madras (B.S. Data Science) · San Francisco
+AI Engineer & Technical Writer (Composio) · IIT Madras (B.S. Data Science)
 
 <br>
 
