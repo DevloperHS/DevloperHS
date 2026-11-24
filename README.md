@@ -4,7 +4,7 @@
 
 **AI engineer. I build agents, test how well they really work, and ship demos people can use.**
 
-AI Engineer and Technical Writer at Composio · IIT Madras (B.S. Data Science) · San Francisco
+AI Engineer (Freelance) · Technical Writer @ Composio · IIT Madras (B.S. Data Science) · San Francisco
 
 <br>
 
@@ -64,12 +64,14 @@ AI Engineer and Technical Writer at Composio · IIT Madras (B.S. Data Science) �
 
 ## ✍️ Writing
 
-- [How to build MCP servers and clients from scratch](https://dev.to/developer_harsh)
-- [Qwen 3 vs. DeepSeek R1: a complete comparison](https://dev.to/developer_harsh)
-- [A practical guide to the Agent-to-Agent (A2A) protocol](https://dev.to/developer_harsh)
-- [Claude Code vs. OpenAI Codex for pair programming](https://dev.to/developer_harsh)
+I write technical articles for [Composio](https://composio.dev/authors/harsh). A few I'm proud of:
 
-More on [Dev.to](https://dev.to/developer_harsh), [Medium](https://medium.com/@devloper_hs) and [Analytics Vidhya](https://www.analyticsvidhya.com/blog/author/harsh1092/). I also make videos on [YouTube](https://youtube.com/@DevloperHarsh).
+- How to build MCP servers and clients from scratch
+- Qwen 3 vs. DeepSeek R1: a complete comparison
+- A practical guide to the Agent-to-Agent (A2A) protocol
+- Claude Code vs. OpenAI Codex for pair programming
+
+Find more on my [Composio author page](https://composio.dev/authors/harsh), [Dev.to](https://dev.to/developer_harsh), [Medium](https://medium.com/@devloper_hs) and [Analytics Vidhya](https://www.analyticsvidhya.com/blog/author/harsh1092/). I also make videos on [YouTube](https://youtube.com/@DevloperHarsh).
 
 <br>
 
